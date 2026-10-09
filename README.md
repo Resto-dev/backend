@@ -1,4 +1,4 @@
-# 🐉 DragonRojo API — RestoAPI
+# 🍽️ RestoAPI
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Coverage](https://img.shields.io/badge/coverage-%E2%89%A570%25-green)
@@ -7,7 +7,7 @@
 ![React](https://img.shields.io/badge/React-18-61DAFB)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-**DragonRojo API** is an end-to-end management ecosystem engineered to automate manual restaurant operations for **Restaurante Chino Dragón Rojo**, a traditional Chinese restaurant located in the heart of Barcelona's **Sagrada Família** district (*Carrer d'Aragó*). 
+**RestoAPI** is an end-to-end management ecosystem engineered to automate manual restaurant operations for a restaurant located in the heart of Barcelona's **Sagrada Família** district (*Carrer d'Aragó*). 
 
 This platform transitions the restaurant from paper tickets, physical notebooks, and manual ledger sheets into a scalable, real-time, cloud-native architecture.
 
@@ -29,7 +29,7 @@ This platform transitions the restaurant from paper tickets, physical notebooks,
 
 ## 1. Business Context & Location
 
-*Restaurante Chino Dragón Rojo* is a bustling local culinary landmark situated along **Carrer d'Aragó**, just steps away from the iconic **Sagrada Família** in Barcelona. Serving both neighbourhood regulars and large daily influxes of international tourists, the restaurant offers authentic Chinese cuisine in a fast-paced environment.
+The restaurant is a bustling local spot situated along **Carrer d'Aragó**, just steps away from the iconic **Sagrada Família** in Barcelona. Serving both neighbourhood regulars and large daily influxes of international tourists, it works in a fast-paced environment.
 
 Despite high customer demand, daily operations relied heavily on legacy pen-and-paper workflows, creating operational bottlenecks across the dining room, kitchen, and administrative office.
 
@@ -59,7 +59,7 @@ During the initial discovery phase, the engineering team identified four primary
 
 ## 3. Automated Software Solution
 
-**DragonRojo API** replaces paper-based operations with an automated, synchronized web ecosystem:
+**RestoAPI** replaces paper-based operations with an automated, synchronized web ecosystem:
 
 * 📱 **Digital POS & Table Management (Waitstaff):** Allows waitstaff to take orders digitally per table, view floor-plan occupancy (interior, terrace, bar) in real time, and process seatings instantly.
 * 🍳 **Real-Time Kitchen Display System (KDS):** Kitchen staff receive orders instantaneously via WebSocket connections as soon as a waiter sends a ticket.
@@ -125,7 +125,7 @@ erDiagram
 2. **`usuarios`**: Central user repository with encrypted passwords (`bcrypt`).
 3. **`mesas`**: Physical table inventory (number, capacity, location: *interior, terraza, barra*, status).
 4. **`reservas`**: Booking logs with duration, guest count, and collision prevention.
-5. **`categorias`**: Menu groupings (e.g., *Dim Sum, Wok, Rice, Beverages*).
+5. **`categorias`**: Menu groupings (e.g., *Starters, Mains, Desserts, Beverages*).
 6. **`platos`**: Menu items with prices, allergen listings, and availability flags.
 7. **`pedidos`**: Orders linked to tables and waitstaff, with status lifecycle (`pendiente` ➔ `en_cocina` ➔ `servido` ➔ `pagado`).
 8. **`detalle_pedido`**: Line items per order capturing historical price snapshot.
@@ -235,4 +235,4 @@ The project was delivered over 2 sprints (10 working days) by a multidisciplinar
 * **CD Pipeline (`deploy.yml`):** On merge to `main`, GitHub Actions triggers auto-deployment hooks to **Render** (API Service) and **Vercel** (Frontend SPA), connected to **Neon Serverless PostgreSQL**.
 
 ---
-*Developed with ❤️ by Team DragonRojo — Barcelona.*
+*Developed with ❤️ by Team RestoAPI — Barcelona.*
